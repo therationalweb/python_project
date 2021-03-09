@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb" style="padding-left:0">
+    <li class="breadcrumb-item active" aria-current="page"><a href="{{url_for('index') }}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Book Inventory</li>
+  </ol>
+</nav>
+
+    <h2 class="mt-4"><i class="fad fa-books text-info"></i>{% block title %} Book Inventory{% endblock %}{{ myVar }}</h2>
+    <hr/>
+    <div class="card">
+       <div class="card-body">
+     <table  id="inventory" class="table table-sm1 table-borderless1">
+       <thead>
+         <tr>
+           <th style="width:45%">Title</th>
+           <th style="width:25%">Author</th>
+           <th style="width:20%">ISBN</th>
+           <th style="width:10%;text-align:right">Price</th>
+           <th style="width:10%">Available</th>
+         </tr>
+       </thead>
+       <tbody>
+        {% for book in book_inventory %}
+        <tr>
+          <td><a href="{{ url_for('editBook', id=book['_id']) }}" class="text-primary">{{ book['title'] }}</a></td>
+          <td>{{ book['author'] }}</td>
+          <td>{{ book['isbn'] }}</td>
+          <td align="right">{{ '${:,.2f}'.format(book['price']) }}</td>
+          <td align="center">{{ book['qty'] }}</td>
+         </tr>
+         {% endfor %}
+       </tbody>
+       <tfoot>
+         <tr><td colspan="5"></td></tr>
+       </tfoot>
+     </table>
+    </div> <!--/card-body -->
+    <div class="card-footer">
+     <div class="row">
+      <div class="col"><a  class="btn btn-light btn-add" href="{{ url_for('addBook') }}">Add New Book</a></div>
+    </div>
+  </div>
+  </div>
+
+
+{% endblock %}
+
+{% block scripty %}
+  <script>$(document).ready(function(){$('#inventory').DataTable();})</script>
+{% endblock %}
+
+
