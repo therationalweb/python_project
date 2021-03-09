@@ -6,7 +6,8 @@ Python
 Flask (from within Python)
 MongoDB
 
-The web pages use JQuery and Bootstrap via CDN links.
+The web pages use JQuery and Bootstrap via CDN.
+If you want to continue to use the FontAwesome icon library, replace the stylesheet link in /templates/base.html with your own.
 
 -- If you have suggestions, please let me know! This was my first attempt at a Python project and I am very much a noob :)
 
