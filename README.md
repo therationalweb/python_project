@@ -1,5 +1,5 @@
 # python_project
-This repository contains the code I created as a proof of concept using Python and Flask. It generates a simple web page that represents the backoffice functions for a hypothetical book store named A to Z Books. Only the inventory and purchase sides are represented. I will add the sales side too, so that I can demonstrate graphing and dynamically update the number of books available.
+This repository contains the code I created as a proof of concept using Python, Flask and MongoDB. It generates a simple web page that represents the backoffice functions for a hypothetical book store named A to Z Books. Only the inventory and purchase sides are represented. I will add the sales side too, so that I can demonstrate graphing and dynamically update the number of books available.
 
 To run this app, you will need to install:
 Python
