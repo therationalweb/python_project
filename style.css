@@ -1,0 +1,33 @@
+body{background-color:#e9e9e9}
+
+/* Override the font specified by Bootstrap fo the headings */
+h1,h2,h3,h4,h5,h6{font-family:Calibri;margin:0 !important;color:tomato;text-shadow: 0 0 white;}
+
+/*Add the very light silver background to the text & number input types 
+input[type="text"], input[type="number"], input[type="date"]{background-color:#F7F7F7 !important;}
+*/
+/* Create a light silver button/anchor style with a subtle border, no border radius and a subtle drop shadow.
+   The default BS buttons are a little too cartoony.
+*/
+a[type="button"], .btn.btn-light{ border:1px solid lightsteelblue;border-radius: 0;box-shadow: 0 0 4px #ddd;}
+/* Toggle the button background to white on hover*/
+.btn.btn-light:hover{ background-color:#fff;}
+
+/* Add the fontawesome icons to Save, Add, Close and Delete buttons*/
+.btn-save::before{content:"\f0c7";font-family:'Font Awesome 5 Pro';font-weight:900;color:steelblue;padding-right:.5em}
+.btn-add::before{content:"\f055";font-family:'Font Awesome 5 Pro';font-weight:900;color:green;padding-right:.5em}
+.btn-close::before{content:"\f057";font-family:'Font Awesome 5 Pro';font-weight:900;color:black;padding-right:.5em}
+.btn-delete::before{content:"\f2ed";font-family:'Font Awesome 5 Pro';font-weight:900;color:#c10F0F;padding-right:.5em}
+
+/* Remove the border radius normally used on cards and add the drop shadow*/
+.card{border-radius:0;box-shadow:2px 2px 8px #999}
+
+/* breadcrumb*/
+.breadcrumb{background-color:transparent !important}
+
+/* decoration for required label */
+label.required::after{content:" *";color:red}
+
+/* change the legend color to Tomato */
+.legend{color:tomato;font-weight:500}
+
